@@ -2,14 +2,14 @@
 
 namespace Source\Core;
 
-use League\Plates\Engine;
+use CoffeeCode\Router\Router;
 
 class Controller
 {
-    private Engine $view;
+    protected View $view;
 
-    public function __construct()
+    public function __construct(Router $router)
     {
-        $this->view = new Engine(__DIR__ . "/../../../theme");
+        $this->view = new View($router);
     }
 }

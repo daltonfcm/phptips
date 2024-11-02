@@ -16,9 +16,9 @@
         echo $this->section("sidebar");
     else:
     ?>
-    <a title="" href="<?= url(); ?>">Home</a>
-    <a title="" href="<?= url("contato"); ?>">Contato</a>
-    <a title="" href="<?= url("teste"); ?>">Teste</a>
+    <a title="" href="<?= $router->route('web.home') ?>">Home</a>
+    <a title="" href="<?= $router->route('web.contact') ?>">Contato</a>
+    <a title="" href="<?= url('teste') ?>">Teste</a>
     <?php
     endif;
     ?>

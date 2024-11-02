@@ -1,4 +1,4 @@
-<?php $this->layout("_theme", ['title' => $title]); ?>
+<?php $this->layout("_theme"); ?>
 
 <div class="error">
     <h2>Ooooops! erro <?= $error; ?>!</h2>

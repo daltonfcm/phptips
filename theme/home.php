@@ -1,4 +1,4 @@
-<?php $this->layout("_theme", ['title' => $title]); ?>
+<?php $this->layout("_theme"); ?>
 
 <div class="users">
     <?php if ($users):

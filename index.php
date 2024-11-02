@@ -4,30 +4,33 @@ require __DIR__ . "/vendor/autoload.php";
 
 use CoffeeCode\Router\Router;
 
-$route = new Router(ROOT);
+$router = new Router(ROOT);
+
 /*
  * APP
  */
-$route->namespace("Source\Controllers\App");
+$router->group(null)->namespace("Source\Controllers\App");
+$router->get("/", "WebController:home", "web.home");
+$router->get("/contato", "WebController:contact", "web.contact");
 
 /*
- * web
+ * USER CONTROLLER [CRUD]
  */
-$route->group(null);
-$route->get("/", "Web:home");
-$route->get("/contato", "Web:contact");
+$router->group("/usuarios")->namespace("Source\Controllers\App");
+$router->get("/", "UserController:list", "userController.list");
+$router->post("/store", "UserController:store", "userController.store");
 
 /*
  * ERROR
  */
-$route->group("/ops");
-$route->get("/{errcode}", "Web:error");
+$router->group("/ops")->namespace("Source\Controllers");
+$router->get("/{errcode}", "ErrorController:show", "error.show");
 
 /*
  * PROCESS
  */
-$route->dispatch();
+$router->dispatch();
 
-if ($route->error()) {
-    $route->redirect("/ops/{$route->error()}");
+if ($router->error()) {
+    $router->redirect("/ops/{$router->error()}");
 }
