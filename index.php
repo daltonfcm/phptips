@@ -4,20 +4,24 @@ require __DIR__ . "/vendor/autoload.php";
 
 use CoffeeCode\Router\Router;
 
+$session = new \Source\Support\Session();
 $router = new Router(ROOT);
 
 /*
  * APP
  */
 $router->group(null)->namespace("Source\Controllers\App");
-$router->get("/", "WebController:home", "web.home");
-$router->get("/contato", "WebController:contact", "web.contact");
+$router->get("/", "WebController:home", "webController.home");
+$router->get("/contato", "WebController:contact", "webController.contact");
 
 /*
  * USER CONTROLLER [CRUD]
  */
 $router->group("/usuarios")->namespace("Source\Controllers\App");
-$router->get("/", "UserController:list", "userController.list");
+$router->get("/", "WebController:usuarios", "webController.usuarios");
+$router->get("/lista", "UserController:list", "userController.list");
+$router->get("/criar", "UserController:create", "userController.create");
+$router->get("/usuario/{userId}", "UserController:show", "userController.show");
 $router->post("/store", "UserController:store", "userController.store");
 
 /*

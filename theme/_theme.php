@@ -16,9 +16,10 @@
         echo $this->section("sidebar");
     else:
     ?>
-    <a title="" href="<?= $router->route('web.home') ?>">Home</a>
-    <a title="" href="<?= $router->route('web.contact') ?>">Contato</a>
+    <a title="" href="<?= $router->route('webController.home') ?>">Home</a>
+    <a title="" href="<?= $router->route('webController.contact') ?>">Contato</a>
     <a title="" href="<?= url('teste') ?>">Teste</a>
+    <a title="" href="<?= $router->route('userController.list') ?>">Usuarios</a>
     <?php
     endif;
     ?>
