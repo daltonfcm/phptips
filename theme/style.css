@@ -7,6 +7,30 @@
     box-sizing: border-box;
 }
 
+.btn {
+    display: inline-block;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: rgba(44, 62, 80, 0.9);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
+.btn-delete {
+    display: inline-block;
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    background: rgba(100, 0, 0, 0.9);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
 .main_nav {
     padding: 20px;
     text-align: center;
@@ -39,10 +63,19 @@
 }
 
 .users_user {
-    flex-basis: 48%;
+    position: relative;
+    flex-basis: 25%;
     padding: 20px;
     background: #eeeeee;
     margin: 1%;
+    border: 1px solid red;
+}
+
+.users_user h3 {
+    /*flex-basis: 20%;*/
+    /*padding: 20px;*/
+    /*background: #eeeeee;*/
+    /*margin: 1%;*/
 }
 
 .contact {
@@ -92,6 +125,16 @@
 
 .contact form button[type='reset']:hover {
     background: #95a5a6;
+}
+
+.create form input, .create form textarea, select {
+    display: block;
+    width: 50%;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    font-size: 1.1em;
+    border: 3px solid #eeeeee;
+    resize: none;
 }
 
 .error {

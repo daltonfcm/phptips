@@ -1,5 +1,6 @@
 <?php $this->layout("_theme"); ?>
 
-<div>
+<div class="contact">
     <h1>Página inicial</h1>
+    <p>Sistema em construção. Aguarde.</p>
 </div>

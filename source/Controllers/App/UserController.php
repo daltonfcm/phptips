@@ -16,7 +16,7 @@ class UserController extends Controller
 
     public function create(): void
     {
-        echo $this->view->render('users/form');
+        echo $this->view->render('users/create');
     }
 
     public function store(?array $data): void

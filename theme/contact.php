@@ -2,7 +2,7 @@
 
 <div class="contact">
     <h2>Fale conosco!</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, laborum?</p>
+    <p>Envie sua dúvida, sugestão ou crítica que em breve entraremos em contato!</p>
 
     <form action="<?= url("contact"); ?>" method="post" enctype="multipart/form-data">
         <input type="text" name="name" placeholder="Seu nome:"/>
