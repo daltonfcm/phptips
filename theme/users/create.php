@@ -14,7 +14,8 @@
             <option value="feminino">Feminino</option>
             <option value="masculino">Masculino</option>
         </select>
-        <button class="btn" type="submit">&#128190; Salvar</button>
+        <button class="" type="submit">&#128190; Salvar</button>
+
     </form>
 </div>
 
