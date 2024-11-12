@@ -8,7 +8,7 @@
 }
 
 .card {
-    width: 33%;
+    width: 32%;
 }
 
 .main_nav {
@@ -114,7 +114,7 @@
     background: #95a5a6;
 }
 
-.create form input, .create form textarea, select {
+.create form input, .create form textarea, .create form select {
     display: block;
     width: 50%;
     margin: 0 auto 20px auto;

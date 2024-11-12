@@ -9,13 +9,12 @@
 <!--         <label for="last_name">Sobrenome</label>-->
         <input type="text" name="last_name" id="last_name" placeholder="Sobrenome">
 <!--        <label for="sexo">Sexo:</label>-->
-        <select id="sexo" name="sexo" required>
+        <select id="genre" name="genre" required>
             <option value="">Sexo</option>
             <option value="feminino">Feminino</option>
             <option value="masculino">Masculino</option>
         </select>
-        <button class="" type="submit">&#128190; Salvar</button>
-
+        <button class="" type="submit">&#128190; Save</button>
     </form>
 </div>
 

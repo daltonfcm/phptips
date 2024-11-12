@@ -9,7 +9,7 @@ class User extends DataLayer
 {
     public function __construct()
     {
-        parent::__construct("users", ["first_name", "last_name"]);
+        parent::__construct("users", ["first_name", "last_name", "genre"]);
     }
 
     public function fullName(): string
@@ -19,11 +19,13 @@ class User extends DataLayer
 
     public function bootstrap(
         ?string $firstName,
-        ?string $lastName
+        ?string $lastName,
+        ?string $genre
     ): User
     {
         $this->first_name = trim(mb_strtoupper($firstName));
         $this->last_name = trim(mb_strtoupper($lastName));
+        $this->genre = trim(mb_strtoupper($genre));
 
         return $this;
     }
@@ -32,7 +34,8 @@ class User extends DataLayer
     {
         $this->bootstrap(
             $data['first_name'] ?? null,
-            $data['last_name'] ?? null
+            $data['last_name'] ?? null,
+            $data['genre'] ?? null
         );
 
         if (!$this->save()) {
@@ -62,9 +65,26 @@ class User extends DataLayer
         return true;
     }
 
+    public function validationGenre(): bool
+    {
+        if ($this->genre == "FEMININO") {
+            $this->genre = "F";
+        } else if ($this->genre == "MASCULINO") {
+            $this->genre = "M";
+        } else {
+            return false;
+        }
+
+        return true;
+    }
+
     public function save(): bool
     {
         if (!$this->validationName()) {
+            return false;
+        }
+
+        if (!$this->validationGenre()) {
             return false;
         }
 
