@@ -1,7 +1,7 @@
 <?php $this->layout("_theme"); ?>
 
 <div class="contact create">
-    <h1>Criar Usuário</h1>
+    <h1>Novo Usuário</h1>
     <br><br>
     <form action="<?= $router->route('userController.store') ?>" method="post">
 <!--         <label for="first_name">Nome</label>-->
@@ -14,12 +14,11 @@
             <option value="feminino">Feminino</option>
             <option value="masculino">Masculino</option>
         </select>
-        <button class="" type="submit">&#128190; Save</button>
+        <button class="btn btn-success btn-lg" type="submit">&#128190; Save</button>
     </form>
 </div>
 
 <?php $this->start("sidebar"); ?>
     <a title="" href="<?= $router->route('webController.home') ?>">Home</a>
     <a title="Voltar para lista de usuários" href="<?= $router->route('userController.list') ?>">Voltar</a>
-
 <?php $this->end(); ?>

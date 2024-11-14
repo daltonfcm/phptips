@@ -11,6 +11,9 @@
     width: 32%;
 }
 
+.bg-form {
+    background: #2c3e50;
+}
 .main_nav {
     padding: 20px;
     text-align: center;

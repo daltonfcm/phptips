@@ -21,8 +21,10 @@ $router->group("/usuarios")->namespace("Source\Controllers\App");
 $router->get("/", "WebController:usuarios", "webController.usuarios");
 $router->get("/lista", "UserController:list", "userController.list");
 $router->get("/criar", "UserController:create", "userController.create");
-$router->get("/usuario/{userId}", "UserController:show", "userController.show");
 $router->post("/store", "UserController:store", "userController.store");
+$router->get("/usuario/{userId}", "UserController:show", "userController.show");
+$router->post("/update/{userId}", "UserController:update", "userController.update");
+$router->post("/delete/{userId}", "UserController:delete", "userController.delete");
 
 /*
  * ERROR

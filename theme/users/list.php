@@ -20,7 +20,11 @@
                                     </a>
                                 </h5>
                                 <div class="">
-                                    <a href="#" class="btn btn-danger">Delete</a>
+                                    <form action="<?= $router->route('userController.delete', [
+                                        'userId' => $user->id
+                                    ]) ?>" method="post">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
