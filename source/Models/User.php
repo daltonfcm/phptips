@@ -14,7 +14,7 @@ class User extends DataLayer
         parent::__construct("users", [
             "first_name",
             "last_name",
-//            "genre"
+            "genre"
         ]);
     }
 
@@ -113,9 +113,9 @@ class User extends DataLayer
             return false;
         }
 
-//        if (!$this->validationGenre()) {
-//            return false;
-//        }
+        if (!$this->validationGenre()) {
+            return false;
+        }
 
         return parent::save();
     }
