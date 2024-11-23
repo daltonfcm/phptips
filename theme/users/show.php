@@ -3,13 +3,11 @@
     <h1 class="text-center">Editar usuário:</h1>
     <div class="w-50 mx-auto text-center bg-form bg-gradient rounded shadow p-5 m-5">
         <h2 class="text-white mb-3 fw-bold"><?= "{$user->first_name} {$user->last_name}" ?></h2>
-
         <div>
             <form class="d-inline" action="<?= $router->route('userController.update', [
                 'userId' => $user->id
             ]) ?>" method="post">
 
-                <!--    <input type="text" name="email" value="--><?php //= $user->email ?><!--">-->
                 <div class="input-group mb-3">
                     <span class="input-group-text text-bg-dark" id="span-first-name">Nome:</span>
                     <input type="text" name="first_name" id="first_name" class="form-control"
@@ -18,7 +16,8 @@
 
                 <div class="input-group mb-3">
                     <span class="input-group-text text-bg-dark" id="span-last-name">Sobrenome:</span>
-                    <input type="text" name="last_name" id="last_name" class="form-control" value="<?= $user->last_name ?>">
+                    <input type="text" name="last_name" id="last_name" class="form-control"
+                           value="<?= $user->last_name ?>">
                 </div>
 
                 <div class="input-group mb-3 w-50 mx-auto">
